@@ -9,22 +9,39 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
+
+
+
+
+
 <body>
-    <nav>
-        <button type="button" onclick="begin()">Start</button>
-        
-        <h1>Hangman Or Die!!!</h1>
+    <nav class="navBar">
+        <button class="navItem button" type="button" onclick="begin()">Start</button>
+
+        <div class="navBar navItem">
+            <h2 class="navItem score" id="remaining">Guesses left:</h2>
+            <h2 class="navItem score" id="wins">Wins</h2>
+        </div>
+
+        <h1 class="navItem title">Hangman Or Die!!!</h1>
 
     </nav>
 
+    <br>
+    
     <div class="body">
         <div id="instructions"><h1>Don't Die!</h1></div>
 
-        <div id="spaces"></div>
+        <div id="spaces">spaces</div>
+
+        <!-- the wrong guesses -->
+        <div id="rejects">rejects</div>
+
+        <div id="outcome">outomce</div>
     </div>
 
     <footer class="footer">
-
+footer
     </footer>
     
    <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script> -->

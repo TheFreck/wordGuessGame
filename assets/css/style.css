@@ -1,3 +1,86 @@
 body{
     background: tan;
 }
+h1{
+    font-size: 22px;
+}
+nav{
+    height: 75px;
+    padding: 0;
+    margin: 0;
+}
+
+.navBar{
+    position: relative;
+    background: darkred;
+    top: 5%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    grid-column-gap: 50px;
+
+}
+.navItem{
+    background: darkred;
+    color: lightsalmon;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-right: auto;
+    padding-left: 1%;
+    width: 100%;
+}
+.body{
+    margin-top: 1%;
+    background: darkkhaki;
+    height: 100%;
+}
+.button{
+    margin: 1%;
+    padding: 1%;
+    color: lightsalmon;
+}
+.score{
+    padding: 5%;
+}
+.spaces{
+    background: darkgrey;
+}
+.rejects{
+    background: darkolivegreen;
+}
+.outcome{
+    background: darkgoldenrod;
+}
+.footer{
+    background: darkgreen;
+    position: sticky;
+    bottom: 0;
+}
+.scoreBox{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+}
+.title{
+    line-height: 3;
+}
+
+#remaining{
+    position: absolute;
+    top: 0;
+    bottom: 50%;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    line-height: 3;
+}
+#wins{
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;  
+    line-height: 3;
+}
