@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charse t="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,36 +16,53 @@
 
 
 <body>
+
     <nav class="navBar">
         <button class="navItem button" type="button" onclick="begin()">Start</button>
 
-        <div class="navBar navItem">
-            <h2 class="navItem score" id="remaining">Guesses left:</h2>
-            <h2 class="navItem score" id="wins">Wins</h2>
-        </div>
+        <div class="navItem remaining" id="remaining">Guesses left:</div>
+        <ul class="navBar navItem scoreBox">
+            <li class="navItem score" id="wins">Wins:</li>
+            <li class="navItem score" id="losses">Losses:</li>
+        </ul>
 
         <h1 class="navItem title">Hangman Or Die!!!</h1>
 
     </nav>
 
     <br>
-    
+
     <div class="body">
-        <div id="instructions"><h1>Don't Die!</h1></div>
+        <div class="screen">
+            <img id="gallows" src="./assets/images/hangman gallows.png" alt="hangman gallows">
+            <img id="rope" src="./assets/images/rope.png" alt="rope">
+            <div id="person">
+                <img id="head" src="./assets/images/head.png" alt="head">
+                <img id="bodyBody" src="./assets/images/body.png" alt="body">
+                <img id="rightArm" src="./assets/images/right arm.png" alt="right arm">
+                <img id="leftArm" src="./assets/images/left arm.png" alt="left arm">
+                <img id="rightLeg" src="./assets/images/right leg.png" alt="right leg">
+                <img id="leftLeg" src="./assets/images/left leg.png" alt="left leg">
 
-        <div id="spaces">spaces</div>
+            </div>
+        </div>
+        <div class="left">
+            <div id="instructions">
+                <h1>Don't Die!</h1>
+            </div>
+    
+            <div id="spaces">spaces</div>
+    
+            <!-- the wrong guesses -->
+            <div id="rejects">rejects</div>
+    
+            <div id="outcome"></div>
+        </div>
 
-        <!-- the wrong guesses -->
-        <div id="rejects">rejects</div>
-
-        <div id="outcome">outomce</div>
     </div>
 
-    <footer class="footer">
-footer
-    </footer>
-    
-   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/core.js"></script> -->
-    <script src="./assets/javascript/script.js" ></script>
+
+    <script src="./assets/javascript/script.js"></script>
 </body>
+
 </html>

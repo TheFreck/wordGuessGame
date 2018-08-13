@@ -1,11 +1,13 @@
 body{
     background: tan;
+    width: 100%;
 }
 h1{
     font-size: 22px;
 }
 nav{
-    height: 75px;
+    height: 100px;
+    width: 100%;
     padding: 0;
     margin: 0;
 }
@@ -16,7 +18,7 @@ nav{
     top: 5%;
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 20% 60%;
+    grid-template-columns: 20% 20% 20% 40%;
     grid-column-gap: 50px;
 
 }
@@ -38,6 +40,7 @@ nav{
     margin: 1%;
     padding: 1%;
     color: lightsalmon;
+    font-size: 32px;
 }
 .score{
     padding: 5%;
@@ -48,14 +51,6 @@ nav{
 .rejects{
     background: darkolivegreen;
 }
-.outcome{
-    background: darkgoldenrod;
-}
-.footer{
-    background: darkgreen;
-    position: sticky;
-    bottom: 0;
-}
 .scoreBox{
     margin: 0;
     padding: 0;
@@ -63,24 +58,101 @@ nav{
     bottom: 0;
 }
 .title{
-    line-height: 3;
+    line-height: 1.5;
+    font-size: 50px;
+    width: 400px;
+}
+.screen{
+    position: relative;
+    height: 700px;
+    width: 520px;
+    padding: 20px;
+    background: silver;
+    margin: 0 auto;
+    background-image: url("");
+    border: ridge;
+    border-width: 10px;
+    border-color: saddlebrown;
 }
 
-#remaining{
+#gallows{
     position: absolute;
-    top: 0;
-    bottom: 50%;
-    font-size: 12px;
+    height: 95%;
+    width: 93%;
+    margin: 0 auto;
+}
+#rope{
+    position: absolute;
+    width: 10%;
+    left: 38.5%;
+    top: 23.7%;
+    display: none;
+}
+#head{
+    position: absolute;
+    width: 18%;
+    left: 34%;
+    top: 22.8%;
+    display: block;
+}
+#bodyBody{
+    position: absolute;
+    width: 12.6%;
+    height: 22.95%;
+    left: 36.6%;
+    top: 36.2%;
+}
+#leftArm{
+    position: absolute;
+    width: 4.4%;
+    left: 32.7%;
+    top: 42.5%;
+}
+#rightArm{
+    position: absolute;
+    width: 4.4%;
+    left: 48.7%;
+    top: 42.5%;
+}
+#leftLeg{
+    position: absolute;
+    width: 3.3%;
+    height: 21.5%;
+    left: 35.4%;
+    top: 57.2%;
+}
+#rightLeg{
+    position: absolute;
+    width: 3.3%;
+    height: 21.5%;
+    left: 47.1%;
+    top: 57.3%;
+}
+#outcome{
+    background: darkgoldenrod;
+    font-size: 50px;
+}
+#remaining{
+    font-size: 28px;
     padding: 0;
     margin: 0;
     line-height: 3;
 }
 #wins{
     position: absolute;
-    bottom: 0;
-    top: 50%;
-    font-size: 12px;
+    top: 0;
+    bottom: 50%;
+    font-size: 18px;
     padding: 0;
     margin: 0;  
+    line-height: 3;
+}
+#losses{
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
     line-height: 3;
 }
