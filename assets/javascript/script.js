@@ -4,17 +4,35 @@ var losses=0;
 
 function begin(){
     console.log("begin");
+    var word = "";
+    var realWordLength = 0;
+    var wordSpaces = [];
+    var wordLength = 0;
+    var head = document.getElementById("head");
+    var torso = document.getElementById("torso");
+    var leftArm = document.getElementById("leftArm");
+    var rightArm = document.getElementById("rightArm");
+    var leftLeg = document.getElementById("leftLeg");
+    var rightLeg = document.getElementById("rightLeg");
+    var rope = document.getElementById("rope");
+    var person = document.getElementById("person");
     
     //initialize
-    
-    document.getElementById("person").style.display="none";
 
-    document.getElementById("rope").style.display="initial";
+    rope.style.visibility = "visible";
+    head.style.visibility = "hidden";
+    torso.style.visibility = "hidden";
+    leftArm.style.visibility = "hidden";
+    rightArm.style.visibility = "hidden";
+    leftLeg.style.visibility = "hidden";
+    rightLeg.style.visibility = "hidden";
+    console.log(rope);
+    console.log(person);
     
 
     document.getElementById("outcome").innerHTML="";
     
-    //create a list of potential words
+    // list of potential band names
     
     var wordList = [
         "LED_ZEPPELIN",
@@ -69,17 +87,7 @@ function begin(){
         
     ];
     
-    var word = "";
-    var realWordLength = 0;
-    var wordSpaces = [];
-    var wordLength = 0;
-    var head = document.getElementById("head");
-    var body = document.getElementById("body");
-    var leftArm = document.getElementById("leftArm");
-    var rightArm = document.getElementById("rightArm");
-    var leftLeg = document.getElementById("leftLeg");
-    var rightLeg = document.getElementById("rightLeg");
-    var rope = document.getElementById("rope");
+
     
     //get a random item from the list
     
@@ -135,10 +143,9 @@ function begin(){
     
     document.onkeyup=function(event){
         var guess = event.key;
-        console.log("guess ", guess);
         var Guess = guess.toUpperCase();
-        console.log("Guess ", Guess)
         var k = 0;
+        
         
         //is the letter correct? if so post it
         
@@ -146,8 +153,6 @@ function begin(){
             if(Guess===word[i]){
                 wordSpaces.splice(i,1,word[i]);
                 k++;
-                console.log("k",k);
-                console.log("wordSpaces",wordSpaces);
             }
         }
         
@@ -164,14 +169,12 @@ function begin(){
         
         //turn it back into a string
         wordString="";
-        console.log("wordString",wordString);
         
         for(i=0; i<wordSpaces.length; i++){
             
             wordString += wordSpaces[i];
         }
         
-        console.log("final wordString",wordString);
         
         //post it with guessed letters revealed
         
@@ -184,20 +187,39 @@ function begin(){
             wins++;
             document.getElementById("wins").innerHTML=`Wins: ${wins}`;
         }
-        
+
         
         if(guessesLeft === 6){
             console.log("6 guessees left");
-            head.style.display="compact";
-            console.log("head on");
-            rope.style.display="none";
-            console.log("rope off");
-        }
-        
-        if(guessesLeft <= 0){
+            head.style.visibility="visible";
+            rope.style.visibility="hidden";
+        }else
+        if(guessesLeft === 5){
+            console.log("5 guesses left");
+            torso.style.visibility = "visible";
+        }else
+        if(guessesLeft === 4){
+            console.log("4 guesses left");
+            leftArm.style.visibility = "visible";
+        }else
+        if(guessesLeft === 3){
+            console.log("3 guesses left");
+            rightArm.style.visibility= "visible";
+        }else
+        if(guessesLeft === 2){
+            console.log("2 guesses left");
+            leftLeg.style.visibility= "visible";
+        }else
+        if(guessesLeft === 1){
+            console.log("1 guesses left");
+            rightLeg.style.visibility= "visible";
+        }else
+        if(guessesLeft === 0){
             document.getElementById("outcome").innerHTML="You Lose";
             losses++
             document.getElementById("losses").innerHTML=`Losses: ${losses}`;
+        }else{
+            console.log("error");
         }
         
     }

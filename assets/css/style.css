@@ -74,6 +74,12 @@ nav{
     border-width: 10px;
     border-color: saddlebrown;
 }
+.left{
+    position: absolute;
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+}
 
 #gallows{
     position: absolute;
@@ -95,7 +101,7 @@ nav{
     top: 22.8%;
     display: block;
 }
-#bodyBody{
+#torso{
     position: absolute;
     width: 12.6%;
     height: 22.95%;
