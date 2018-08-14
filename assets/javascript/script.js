@@ -1,6 +1,7 @@
 var wins=0;
 var losses=0;
 
+outcome.style.visibility = "hidden";
 
 function begin(){
     console.log("begin");
@@ -16,6 +17,7 @@ function begin(){
     var rightLeg = document.getElementById("rightLeg");
     var rope = document.getElementById("rope");
     var person = document.getElementById("person");
+    var outcome = document.getElementById("outcome");
     
     //initialize
 
@@ -26,6 +28,7 @@ function begin(){
     rightArm.style.visibility = "hidden";
     leftLeg.style.visibility = "hidden";
     rightLeg.style.visibility = "hidden";
+    outcome.style.visibility = "hidden";
     console.log(rope);
     console.log(person);
     
@@ -35,53 +38,53 @@ function begin(){
     // list of potential band names
     
     var wordList = [
-        "LED_ZEPPELIN",
-        "PINK_FLOYD",
+        "LED__ZEPPELIN",
+        "PINK__FLOYD",
         "DOORS",
         "BEATLES",
-        "VIOLENT_FEMMES",
+        "VIOLENT__FEMMES",
         "PIXIES",
-        "JANE'S_ADDICTION",
-        "MODEST_MOUSE",
+        "JANE'S__ADDICTION",
+        "MODEST__MOUSE",
         "TOOL",
         "RADIOHEAD",
-        "SMASHING_PUMPKINS",
-        "DEATHCAB_FOR_CUTIE",
+        "SMASHING__PUMPKINS",
+        "DEATHCAB__FOR__CUTIE",
         "NIRVANA",
-        "PEARL_JAM",
-        "SOUND_GARDEN",
-        "DEF_LEOPARD",
-        "NINE_INCH_NAILS",
-        "DEVIL_MAKES_THREE",
-        "RAILROAD_EARTH",
-        "TRAMPLED_BY_TURTLES",
-        "HOT_BUTTERED_RUM",
-        "JACKSON_FIVE",
-        "CANNED_HEAT",
+        "PEARL__JAM",
+        "SOUND__GARDEN",
+        "DEF__LEOPARD",
+        "NINE__INCH__NAILS",
+        "DEVIL__MAKES__THREE",
+        "RAILROAD__EARTH",
+        "TRAMPLED__BY__TURTLES",
+        "HOT__BUTTERED__RUM",
+        "JACKSON__FIVE",
+        "CANNED__HEAT",
         "RUSH",
-        "BLACK_SABBATH",
-        "BEASTIE_BOYS",
-        "RUN_DMC",
+        "BLACK__SABBATH",
+        "BEASTIE__BOYS",
+        "RUN__DMC",
         "EMINEM",
         "FUGIES",
-        "DIGABLE_PLANET",
-        "MASSIVE_ATTACK",
+        "DIGABLE__PLANET",
+        "MASSIVE__ATTACK",
         "PORTISHEAD",
-        "THIEVERY_CORPORATION",
+        "THIEVERY__CORPORATION",
         "ABBA",
         "SHPONGLE",
         "DEFTONES",
         "CLUTCH",
-        "DEAD_KENNEDIES",
-        "BAD_RELIGION",
-        "SEX_PISTOLS",
+        "DEAD__KENNEDIES",
+        "BAD__RELIGION",
+        "SEX__PISTOLS",
         "VANDALS",
         "REM",
-        "VELVET_UNDERGROUND",
+        "VELVET__UNDERGROUND",
         "SUBLIME",
         "CREAM",
-        "TALKING_HEADS",
-        "THEY_MIGHT_BE_GIANTS"
+        "TALKING__HEADS",
+        "THEY__MIGHT__BE__GIANTS"
 
         
         
@@ -130,7 +133,7 @@ function begin(){
     
     //print the spaces string on the screen
     
-    document.getElementById("instructions").innerHTML=`There are ${realWordLength} letters int this band name`;
+    document.getElementById("instructions").innerHTML=`There are ${realWordLength} letters in this band name`;
     
     
     document.getElementById("spaces").innerHTML=wordString;
@@ -183,7 +186,8 @@ function begin(){
         //test to see if win or loss
         var n = wordString.includes("_");
         if(!n){
-            document.getElementById("outcome").innerHTML="You WIN!!!";
+            outcome.style.visibility = "visible";
+            outcome.innerHTML="You WIN!!!";
             wins++;
             document.getElementById("wins").innerHTML=`Wins: ${wins}`;
         }
@@ -218,6 +222,7 @@ function begin(){
             document.getElementById("outcome").innerHTML="You Lose";
             losses++
             document.getElementById("losses").innerHTML=`Losses: ${losses}`;
+            outcome.style.visibility = "visible";
         }else{
             console.log("error");
         }
