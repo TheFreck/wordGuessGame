@@ -50,8 +50,6 @@ nav{
 .score{
     padding: 5%;
 }
-.spaces{
-}
 .rejects{
     background: darkolivegreen;
 }
@@ -86,9 +84,17 @@ nav{
     border: ridge;
     border-width: 10px;
     border-color: saddlebrown;
+    padding-top: 5%;
 }
 
 
+#spaces{
+    color: red;
+    box-shadow: 0px 0px 10px red;
+    padding: 1%;
+    width: 90%;
+    margin: auto;
+}
 #gallows{
     position: absolute;
     height: 95%;

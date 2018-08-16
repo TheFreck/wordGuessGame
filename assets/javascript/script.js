@@ -184,6 +184,7 @@ function begin(){
         document.getElementById("spaces").innerHTML=wordString; 
         
         //test to see if win or loss
+
         var n = wordString.includes("_");
         if(!n){
             outcome.style.visibility = "visible";
@@ -223,6 +224,7 @@ function begin(){
             losses++
             document.getElementById("losses").innerHTML=`Losses: ${losses}`;
             outcome.style.visibility = "visible";
+            document.getElementById("spaces").innerHTML=word;
         }else{
             console.log("error");
         }
